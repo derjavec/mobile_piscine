@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   geolocator: ^14.0.2 
-  permission_handler: ^10.4.0
+  permission_handler: ^11.3.1
   http: ^1.1.0
   flutter_typeahead: ^5.2.0
 
