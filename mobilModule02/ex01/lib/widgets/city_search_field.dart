@@ -19,21 +19,23 @@ class CitySearchField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TypeAheadField(
-      textFieldConfiguration: TextFieldConfiguration(
-        controller: controller,
-        decoration: InputDecoration(
-          hintText: "Search city...",
-          border: OutlineInputBorder(),
-          suffixIcon: IconButton(
-            icon: Icon(Icons.my_location),
-            onPressed: onMyLocationPressed,
+    return TypeAheadField<Map<String, dynamic>>(
+      builder: (context, textController, focusNode) {
+        return TextField(
+          controller: textController,
+          focusNode: focusNode,
+          decoration: InputDecoration(
+            hintText: "Search city...",
+            border: OutlineInputBorder(),
+            suffixIcon: IconButton(
+              icon: const Icon(Icons.my_location),
+              onPressed: onMyLocationPressed,
+            ),
           ),
-        ),
-      ),
+        );
+      },
       suggestionsCallback: (pattern) async {
         if (pattern.isEmpty) return [];
-
         final url =
             "https://geocoding-api.open-meteo.com/v1/search?name=${Uri.encodeComponent(pattern)}&count=5&language=en&format=json";
         try {
@@ -48,25 +50,21 @@ class CitySearchField extends StatelessWidget {
               };
             }).toList();
           }
-          return [];
         } catch (e) {
           print("Error en fetch: $e");
-          return [];
         }
+        return [];
       },
       itemBuilder: (context, suggestion) {
-        final s = suggestion as Map<String, dynamic>;
+        final s = suggestion;
         return ListTile(
           leading: const Icon(Icons.location_city),
           title: Text(s['description']),
         );
       },
-      onSuggestionSelected: (suggestion) {
-        final s = suggestion as Map<String, dynamic>;
-        final lat = s['lat'];
-        final lon = s['lon'];
-
-        onCitySelected(s['description'], lat, lon);
+      onSelected: (suggestion) {
+        final s = suggestion;
+        onCitySelected(s['description'], s['lat'], s['lon']);
       },
     );
   }
