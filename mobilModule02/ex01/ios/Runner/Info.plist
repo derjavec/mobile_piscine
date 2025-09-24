@@ -44,8 +44,8 @@
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<key>NSLocationWhenInUseUsageDescription</key>
-    <string>We need your location to show the weather</string>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to show the weather</string>
 </dict>
 </plist>
