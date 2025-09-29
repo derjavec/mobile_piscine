@@ -62,7 +62,7 @@ class LocationService {
           };
         }).toList();
       }
-    } catch (_) {print("culo : searchcity");}
+    } catch (_) {}
     return [];
   }
 }
