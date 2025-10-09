@@ -12,7 +12,20 @@
           "package_name": "com.derjavec.diaryapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "524351846273-gl90gsqfamhph8dnesdjrrr34gvtd716.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.derjavec.diaryapp",
+            "certificate_hash": "0f22da51af7955968eaa5601a1839104837132b0"
+          }
+        },
+        {
+          "client_id": "524351846273-bhh4ti51ovqat60n7gm0ldrutgi2qmoj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCaoF9-neA1hQDIzS-wBoaijFz1OFis3Ec"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524351846273-bhh4ti51ovqat60n7gm0ldrutgi2qmoj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "524351846273-eh0pb0qlvhqamqgfneoh6esh5jtfdqc0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.derjavec.diaryapp"
+              }
+            }
+          ]
         }
       }
     }

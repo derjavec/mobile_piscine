@@ -1,16 +1,10 @@
+
 plugins {
     // Otros plugins de Gradle que uses
     // ...
 
     // Plugin de Google Services (para Firebase)
     id("com.google.gms.google-services") version "4.4.3" apply false
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
 }
 
 val newBuildDir: Directory =

@@ -1,0 +1,5 @@
+# Flutter & Node
+build/
+node_modules/
+.dart_tool/
+

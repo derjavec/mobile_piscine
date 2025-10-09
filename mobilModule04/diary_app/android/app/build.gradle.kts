@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.diary_app"
+    namespace = "com.derjavec.diaryapp"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -22,7 +22,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.diary_app"
+        applicationId = "com.derjavec.diaryapp"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
@@ -45,9 +45,16 @@ flutter {
 }
 
 dependencies {
+    // Firebase BoM gestiona todas las versiones de Firebase automáticamente
     implementation(platform("com.google.firebase:firebase-bom:34.3.0"))
 
-    implementation("com.google.firebase:firebase-auth-ktx")
-
+    // Librerías de Firebase, sin versión explícita
+    implementation("com.google.firebase:firebase-auth-ktx:22.1.1")
     implementation("com.google.android.gms:play-services-auth:21.2.0")
 }
+
+
+
+
+apply(plugin = "com.google.gms.google-services")
+

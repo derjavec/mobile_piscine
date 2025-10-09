@@ -1,6 +1,6 @@
 {
-    "name": "diary_app",
-    "short_name": "diary_app",
+    "name": "diaryapp",
+    "short_name": "diaryapp",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
